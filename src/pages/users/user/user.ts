@@ -10,13 +10,8 @@ export class UserPage {
 
   constructor(private navParams: NavParams,
               private navCtrl: NavController) {
-
   }
   ngOnInit(){
     this.name=this.navParams.get('username');
-  }
-  onGoBack(){
-    // this.navCtrl.pop();
-    this.navCtrl.popToRoot();
   }
 }
