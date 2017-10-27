@@ -7,7 +7,9 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="onGoToUsers()">Users</button>
+  <!--direct navigation with directive-->
+  <!--we can use directive when we dont need to send any data with it-->
+  <button ion-button [navPush]="usrPage">Users</button>
   <hr>
   <button ion-button (click)="goToPage()">Shop</button>
 </ion-content>
