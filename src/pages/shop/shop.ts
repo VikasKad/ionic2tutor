@@ -16,7 +16,27 @@ export class ShopPage {
     console.log('ionViewDidLoad ShopPage');
   }
 
-  onBuy(productData:{name:string,qty:number}) {
-    this.navCtrl.push(BuyoutPage,productData);
+  ionViewWillEnter() {
+    console.log("will enter");
+  }
+
+  ionViewCanLeave(): boolean | Promise<boolean> {
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve();
+      }, 1000);
+    })
+    return promise;
+  }
+
+  ionViewCanEnter(): boolean | Promise<boolean> {
+
+    const rnd = Math.random();
+    console.log("ion view can enter", rnd);
+    return rnd > 0.5;
+  }
+
+  onBuy(productData: { name: string, qty: number }) {
+    this.navCtrl.push(BuyoutPage, productData);
   }
 }

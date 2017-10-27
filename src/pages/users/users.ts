@@ -23,7 +23,7 @@ export class UsersPage {
     console.log('ionViewDidLoad UsersPage');
   }
 
-  onLoadUser(name:string) {
-    this.navCtrl.push(UserPage,{username:name});
+  onLoadUser(name: string) {
+    this.navCtrl.push(UserPage, {username: name});
   }
 }

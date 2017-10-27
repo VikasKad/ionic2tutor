@@ -10,13 +10,18 @@ import {ShopPage} from "../shop/shop";
 })
 export class HomePage {
 
-  usrPage=UsersPage;
+  usrPage = UsersPage;
+
   constructor(public navCtrl: NavController) {
 
   };
 
   goToPage() {
-    this.navCtrl.push(ShopPage);
+    this.navCtrl.push(ShopPage)
+      .catch((error) =>
+        console.log("access denied",error)
+      )
+    ;
   }
 
 }
